@@ -1,6 +1,8 @@
-<?php declare(strict_types=1);
+<?php
 
-namespace Vendi\Dumper\Type;
+declare(strict_types=1);
+
+namespace Vendi\Dumper\Type\Scalar;
 
 final class Text extends GenericScalar
 {
