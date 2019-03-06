@@ -15,7 +15,7 @@ final class Date extends GenericScalar
 
     public function getValue()
     {
-        return $this->value ? $this->value->toString('Y-m-d') : null;
+        return $this->value ? $this->value->format('Y-m-d') : null;
     }
 
     public static function create_from_string(?string $value) : self
