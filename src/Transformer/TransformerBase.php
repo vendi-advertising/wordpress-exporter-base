@@ -10,12 +10,12 @@ abstract class TransformerBase
     {
         return preg_replace('~>\s+<~', '><', $html);
     }
-    
+
     final public function fix_html(string $html) : string
     {
-        $html = str_replace('<br /></strong>', '</strong><br />', $html);
         $html = str_replace('<b>', '<strong>', $html);
         $html = str_replace('</b>', '</strong>', $html);
+        $html = str_replace('<br /></strong>', '</strong><br />', $html);
 
         return $html;
     }
