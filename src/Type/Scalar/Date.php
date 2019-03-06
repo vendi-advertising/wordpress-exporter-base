@@ -24,6 +24,11 @@ class Date extends GenericScalar
             return new static(null);
         }
 
-        return new static(\DateTime::createFromFormat('Ymd', str_replace('-', '', $value)));
+        $ret = \DateTime::createFromFormat('Ymd', str_replace('-', '', $value));
+        if(!$ret instanceOf \DateTime){
+            throw new \Exception('Invalid date-like value: ' . $value);
+        }
+
+        return new static($ret);
     }
 }
