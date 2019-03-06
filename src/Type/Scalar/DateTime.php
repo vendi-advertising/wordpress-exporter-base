@@ -26,7 +26,10 @@ class DateTime extends GenericScalar
 
         $ret = \DateTime::createFromFormat('Ymd H:i:s', str_replace('-', '', $value));
         if (!$ret instanceof \DateTime) {
-            throw new \Exception('Invalid date-like value: ' . $value);
+            $ret = \DateTime::createFromFormat('Ymd', str_replace('-', '', $value));
+            if (!$ret instanceof \DateTime) {
+                throw new \Exception('Invalid date-like value: ' . $value);
+            }
         }
 
         return new static($ret);
