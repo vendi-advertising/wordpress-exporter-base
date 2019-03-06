@@ -1,6 +1,6 @@
 <?php declare(strict_types=1);
 
-namespace Vendi\Dumper\Transformers;
+namespace Vendi\Dumper\Transformer;
 
 abstract class TransformerBase
 {

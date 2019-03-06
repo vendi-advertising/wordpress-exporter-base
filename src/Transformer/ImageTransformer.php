@@ -1,6 +1,6 @@
 <?php declare(strict_types=1);
 
-namespace Vendi\Dumper\Transformers;
+namespace Vendi\Dumper\Transformer;
 
 use Vendi\Dumper\Type\Complex\MediaType;
 use Vendi\Dumper\Type\GenericComplex;
