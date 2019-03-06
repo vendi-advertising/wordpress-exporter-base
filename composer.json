@@ -1,0 +1,24 @@
+{
+    "name": "vendi-advertising/wordpress-exporter-base",
+    "type": "library",
+    "license": "MIT",
+    "authors": [
+        {
+            "name": "Chris Haas",
+            "email": "chris@vendiadvertising.com"
+        }
+    ],
+    "autoload": {
+        "psr-4": {
+            "Vendi\\Dumper": "src/"
+        }
+    },
+    "require": {
+        "php": "^7.2",
+        "symfony/console": "4.2.*",
+        "webmozart/path-util": "^2.3"
+    },
+    "require-dev": {
+        "friendsofphp/php-cs-fixer": "^2.14"
+    }
+}
