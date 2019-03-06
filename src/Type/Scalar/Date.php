@@ -25,7 +25,7 @@ class Date extends GenericScalar
         }
 
         $ret = \DateTime::createFromFormat('Ymd', str_replace('-', '', $value));
-        if(!$ret instanceOf \DateTime){
+        if (!$ret instanceof \DateTime) {
             throw new \Exception('Invalid date-like value: ' . $value);
         }
 
