@@ -6,7 +6,7 @@ namespace Vendi\Dumper\Type\Scalar;
 
 use Vendi\Dumper\Type\GenericScalar;
 
-final class DateTime extends GenericScalar
+class DateTime extends GenericScalar
 {
     public function __construct(?\DateTime $value)
     {
