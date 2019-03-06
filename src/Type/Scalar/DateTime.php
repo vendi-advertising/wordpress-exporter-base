@@ -21,9 +21,9 @@ class DateTime extends GenericScalar
     public static function create_from_string(?string $value) : self
     {
         if (!$value) {
-            return new self(null);
+            return new static(null);
         }
 
-        return new self(\DateTime::createFromFormat('Ymd H:i:s', str_replace('-', '', $value)));
+        return new static(\DateTime::createFromFormat('Ymd H:i:s', str_replace('-', '', $value)));
     }
 }
