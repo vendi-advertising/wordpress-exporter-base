@@ -24,6 +24,6 @@ final class Date extends GenericScalar
             return new self(null);
         }
 
-        return new self(\DateTime::createFromFormat('Y-m-d', $value));
+        return new self(\DateTime::createFromFormat('Ymd', str_replace('-', '', $value)));
     }
 }
