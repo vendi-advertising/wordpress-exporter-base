@@ -6,13 +6,13 @@ namespace Vendi\Dumper\Type\Scalar;
 
 use Vendi\Dumper\Type\GenericScalar;
 
-final class Text extends GenericScalar
+class Text extends GenericScalar
 {
-    public function __construct($value, bool $trim = true)
+    public function __construct($value, bool $trim = true, string $valueType = 'string')
     {
         if ($trim && \is_string($value)) {
             $value = trim('' . $value);
         }
-        parent::__construct('string', $value);
+        parent::__construct($valueType, $value);
     }
 }
