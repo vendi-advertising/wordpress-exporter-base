@@ -2,7 +2,7 @@
 
 declare(strict_types=1);
 
-namespace Vendi\Dumper\Entities;
+namespace Vendi\Dumper\Type\Complex;
 
 use Vendi\Dumper\Type\GenericComplex;
 use Vendi\Dumper\Type\Scalar\Text;
