@@ -8,7 +8,7 @@ abstract class GenericComplex extends GenericType
 {
     protected $values = [];
 
-    public function set_value(string $name, BaseType $value)
+    public function set_value(string $name, GenericType $value)
     {
         $this->values[$name] = $value;
     }
