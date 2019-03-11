@@ -31,9 +31,12 @@ class MediaType extends GenericComplex
 
         $valid_keys = ['width', 'height', 'file'];
         $meta = \wp_get_attachment_metadata($this->wordpress_id);
-        foreach ($valid_keys as $key) {
-            if (array_key_exists($key, $meta)) {
-                $ret[$key] = $meta[$key];
+
+        if(false !== $meta){
+            foreach ($valid_keys as $key) {
+                if (array_key_exists($key, $meta)) {
+                    $ret[$key] = $meta[$key];
+                }
             }
         }
 
